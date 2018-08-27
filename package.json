@@ -4,25 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node ./build/webpack.babel.server.js",
-    "build:prod": "ENV = prod babel-node ./build/webpack.babel.client.js",
-    "build:preprod": "ENV = preprod babel-node ./build/webpack.babel.client.js",
-    "build:recette": "ENV = recette babel-node ./build/webpack.babel.client.js"
+    "start": "cross-env NODE_ENV=development babel-node ./build/server.js",
+    "build:prod": "cross-env NODE_ENV = prod babel-node ./build/webpack.babel.client.js",
+    "build:preprod": "SET NODE_ENV = preprod babel-node ./build/webpack.babel.client.js",
+    "build:recette": "SET NODE_ENV = recette babel-node ./build/webpack.babel.client.js"
   },
   "author": "Hajji Tarik",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "ejs": "^2.6.1",
     "merge": "^1.2.0",
+    "react-hot-loader": "^4.3.4",
     "webpack": "^4.16.5",
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
-    "babel-loader": "^7.1.5",
     "mobx": "^5.0.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"

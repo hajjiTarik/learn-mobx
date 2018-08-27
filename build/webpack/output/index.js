@@ -1,11 +1,10 @@
 import path from 'path';
-
+import paths from "./../config/paths";
 export const client =() => {
     return {
         output :{
-            path: path.resolve(__dirname, "dist"),
+            path: paths.src,
             filename: "bundle.js",
-            publicPath: "/assets/",
             libraryTarget: "umd",
         }
     }
@@ -13,9 +12,8 @@ export const client =() => {
 export const serverOutputs =() => {
     return {
         output : {
-            path: path.resolve(__dirname, "dist"),
+            path: paths.src,
             filename: "bundle.js",
-            publicPath: "/assets/",
             libraryTarget: "umd",
         }
     }

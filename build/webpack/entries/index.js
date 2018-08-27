@@ -9,7 +9,10 @@ export const clientEntries = () => {
 export const serverEntries = () => {
     return {
         entry :{
-            app : './src/index.js'
+            app : [
+                'webpack/hot/only-dev-server',
+                './src/index.js'
+            ]
         }
     }
 };

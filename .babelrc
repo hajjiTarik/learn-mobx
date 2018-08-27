@@ -7,6 +7,7 @@
   "plugins": [
     "transform-es2015-arrow-functions",
     "transform-class-properties",
-    "transform-decorators"
+    "transform-decorators",
+    "react-hot-loader/babel"
   ]
 }
